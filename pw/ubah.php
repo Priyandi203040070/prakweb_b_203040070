@@ -10,7 +10,7 @@ if (!isset($_GET['id_buku'])) {
 // ambil id dari url
 $id = $_GET['id_buku'];
 
-// query mahasiswa berdasarkan id
+// query buku berdasarkan id
 $b = query("SELECT * FROM buku WHERE id_buku = $id");
 
 // cek apakah tombol ubah sudah ditekan
