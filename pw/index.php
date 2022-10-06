@@ -24,19 +24,24 @@ $buku = query("SELECT * FROM buku");
 </head>
 
 <body>
+<div class="container-sm">
   <!-- judul -->
   <h1 >BOOK STORE</h1>
-
+  
   <!-- code tambah -->
   <a href="tambah.php">Tambah Data Buku</a>
    <br><br>
 
    <!-- code cari -->
-  <form action="" method="POST">
-    <input type="text" name="keyword" size="40" placeholder="masukkan keyword pencarian.." autocomplete="off" autofocus>
-    <button type="submit" name="cari">Cari!</button>
-  </form>
-  <br>
+    <form class="row g-3" action="" method="POST">
+    <div class="col-auto">
+    <input type="text" class="form-control" name="keyword" size="40" placeholder="masukkan keyword pencarian.." autocomplete="off" autofocus>
+    </div>
+    <div class="col-auto">
+    <button class="btn btn-primary" type="submit" name="cari">Cari!</button>
+    </div>
+    </form>
+    <br>
 
   <!-- tabel buku -->
   <table class="table table-dark table-striped">
@@ -49,7 +54,7 @@ $buku = query("SELECT * FROM buku");
       <th scope="col">Option</th>
     </tr>
     </thead>
-
+    </div>
     <tbody>
 
     <!-- untuk memberikan informasi apabila data tidak ditemukan -->
