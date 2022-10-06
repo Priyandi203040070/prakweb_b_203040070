@@ -1,3 +1,4 @@
+<!-- ini adalah file yang berisi code untuk menghapus data -->
 <?php
 require 'function.php';
 
