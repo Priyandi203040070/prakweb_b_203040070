@@ -24,12 +24,12 @@ $buku = query("SELECT * FROM buku");
 </head>
 
 <body>
-<div class="container-sm">
+<div class="container-sm">  
   <!-- judul -->
   <h1 >BOOK STORE</h1>
   
   <!-- code tambah -->
-  <a href="tambah.php">Tambah Data Buku</a>
+  <a class="btn btn-success" href="tambah.php" role="button">Tambah Data Buku</a>
    <br><br>
 
    <!-- code cari -->
