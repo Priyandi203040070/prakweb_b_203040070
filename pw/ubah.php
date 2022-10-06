@@ -26,6 +26,10 @@ if (isset($_POST['ubah'])) {
 }
 
 ?>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,36 +37,31 @@ if (isset($_POST['ubah'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ubah Data Perpustakaan</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-  <h3>Form Ubah Data Perpustakaan</h3>
+<div class="container">
+  <!-- Content here -->
+  <h3 style="text-align:center" class="tambah">Form tambah data perpustakaan</h3>
+
   <form action="" method="POST">
-    <input type="hidden" name="id_buku" value="<?= $b['id_buku']; ?>">
-    <ul>
-      <li>
-        <label>
-          Judul :
-          <input type="text" name="judul_buku" autofocus required value="<?= $b['judul_buku']; ?>">
-        </label>
-      </li>
-      <li>
-        <label>
-          Pengarang :
-          <input type="text" name="pengarang_buku" required value="<?= $b['pengarang_buku']; ?>">
-        </label>
-      </li>
-      <li>
-        <label>
-          Gambar :
-          <input type="text" name="gambar_buku" required value="<?= $b['gambar_buku']; ?>">
-        </label>
-      </li>
-      <li>
-        <button type="submit" name="ubah">Ubah Data!</button>
-      </li>
-    </ul>
-  </form>
+    
+  <input type="hidden" name="id_buku" value="<?= $b['id_buku']; ?>">
+
+  <div class="input-group mb-3">
+  <input type="text" name="judul_buku" class="form-control" placeholder="Nama Buku" aria-label="Nama Buku" aria-describedby="basic-addon1" autofocus required value="<?= $b['judul_buku']; ?>">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text" name="pengarang_buku" class="form-control" placeholder="Nama Pengarang" aria-label="Nama Pengarang" aria-describedby="basic-addon2" required value="<?= $b['pengarang_buku']; ?>">
+</div>
+
+<div class="input-group mb-3">
+  <input type="text"  name="gambar_buku" class="form-control" id="basic-url" placeholder="Gambar" aria-label="Gambar" aria-describedby="basic-addon3" required value="<?= $b['gambar_buku']; ?>">
+</div>
+<center><button type="submit" class="btn btn-warning" name="ubah"><h4>Ubah Data</h4></button></center>
+
 </body>
 
 </html>
