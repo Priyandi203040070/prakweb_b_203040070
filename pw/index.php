@@ -24,25 +24,45 @@ $buku = query("SELECT * FROM buku");
 </head>
 
 <body>
+
+  <!-- Navbar -->
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
 <div class="container-sm">  
+  
   <!-- judul -->
   <h1 >BOOK STORE</h1>
   
-  <!-- code tambah -->
-  <a class="btn btn-success" href="tambah.php" role="button">Tambah Data Buku</a>
-   <br><br>
 
+<div>
    <!-- code cari -->
-    <form class="row g-3" action="" method="POST">
-    <div class="col-auto">
-    <input type="text" class="form-control" name="keyword" size="40" placeholder="masukkan keyword pencarian.." autocomplete="off" autofocus>
-    </div>
-    <div class="col-auto">
-    <button class="btn btn-primary" type="submit" name="cari">Cari!</button>
-    </div>
-    </form>
-    <br>
+  <form class="row g-3" action="" method="POST">
+  <div class="col-auto">
+  <input type="text" class="form-control" name="keyword" size="40" placeholder="masukkan keyword pencarian.." autocomplete="off" autofocus>
+  </div>
+  <div class="col-auto">
+  <button class="btn btn-primary" type="submit" name="cari">Cari!</button>
+  </div>
+  <!-- code tambah -->
+  <div style="text-align:right;" class="col-auto">
+  <a style="element:right"class="btn btn-success" href="tambah.php" role="button">Tambah Data Buku</a>
+  </div>
 
+  </form>
+  
+    </div>
   <!-- tabel buku -->
   <table class="table table-dark table-striped">
   <thead>
