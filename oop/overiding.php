@@ -7,7 +7,7 @@ class Produk
   public $judul ,
          $penulis ,
          $penerbit ,
-         $harga,
+         $harga;
 
 
   public function __construct( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0){
@@ -25,7 +25,7 @@ class Produk
 
   public function getInfoProduk(){
     // Komik : Naruto | Mashashi Kishimoto, Shonen Jump (Rp. 30000) - 100 Halaman.
-    $str = "{$this->tipe} : {$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
+    $str = " {$this->judul} | {$this->getLabel()} (Rp. {$this->harga})";
 
     return $str;
   }
@@ -44,14 +44,7 @@ class Komik extends Produk {
     }
 
     public function getInfoProduk(){
-      public $waktuMain;
-
-      public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $waktuMain = 0){
-      parent::__construct($judul , $penulis , $penerbit , $harga );
-
-      $this->waktuMain = $waktuMain;
-
-      }
+      
       $str = "Komik : " . parent::getInfoProduk() . " - {$this->jmlHalaman} Halaman.";
       return $str;
     }
@@ -59,6 +52,14 @@ class Komik extends Produk {
 }
 
 class Game extends Produk{
+  public $waktuMain;
+
+      public function __construct($judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0, $waktuMain = 0){
+      parent::__construct($judul , $penulis , $penerbit , $harga );
+
+      $this->waktuMain = $waktuMain;
+
+      }
   public function getInfoProduk(){
     $str = "Game : " . parent::getInfoProduk() . " - {$this->waktuMain} Jam.";
     return $str;
