@@ -10,7 +10,6 @@ class Produk
          $harga ;
 
   public function __construct( $judul = "judul", $penulis = "penulis", $penerbit = "penerbit", $harga = 0){
-      echo "Hello World!";
       $this->judul = $judul;
       $this->penulis = $penulis;
       $this->penerbit = $penerbit;
@@ -22,6 +21,14 @@ class Produk
     return "$this->penulis, $this->penerbit";
 
   }
+}
+
+class CetakInfoProduk {
+  public function cetak( Produk $produk ) {
+      $str = "{$produk->judul} | {$produk->getLabel()} (Rp. {$produk->harga})";
+      return $str;
+  }
+  
 }
 
 // $produk1 = new Produk();

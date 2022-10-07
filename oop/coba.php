@@ -9,7 +9,7 @@ class Coba {
 
 $a = new Coba();
 $b = new Coba();
-$c = new Cpba();
+$c = new Coba();
 
 
 var_dump($a);
